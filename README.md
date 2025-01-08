@@ -1,0 +1,3 @@
+# React Native useCallback Hook with Stale Closures
+
+This repository demonstrates a common error in React Native when using the `useCallback` hook: stale closures. The `useCallback` hook is designed to memoize functions, preventing unnecessary re-renders. However, if the memoized function depends on values outside its scope (such as state variables), and those values change, the function will continue using the old values unless you explicitly list those values as dependencies in useCallback's dependency array.
